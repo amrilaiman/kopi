@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=sytle.css>
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">☕ kopi kita</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produk">produk</a></li>
+                <li><a href="#tentang">tentang</a></li>
+                <li><a href="#kontak">kontak</a></li>
+            </ul>
+        </nav>
+        <button class="cart-btn" onclick="lihatkeranjang()">🛒 keranjang <span id="jumlah">0</span>></button>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+    <h1>nikmati kopi terbaik setiap hari</h1>  
+     <p>
+        temukan cita rasa kopi pilihan dengan aroma 
+         khas dan kualitas terbaik
+      </p>
+      <a href="#produk" class="btn">belanja sekarang</a>
+      </div>
+      </section>
+
+      <section class="produk" id="produk">
+        <h2>produk kopi kami</h2>
+        <p class="subtitle">pilihan kopi favorit untuk menemani harimu</p>
+
+
+        <div class="produk-countainer">
+
+             <div class="card">
+                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600" alt="Kopi Arabika">
+                <h3>Kopi Arabika</h3>
+                <p>Kopi dengan rasa lembut dan aroma khas.</p>
+                <h4>Rp45.000</h4>
+                <button onclick="tambahKeranjang('Kopi Arabika', 45000)">
+                    Tambah Keranjang
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=600" alt="Kopi Robusta">
+                <h3>Kopi Robusta</h3>
+                <p>Memiliki rasa kuat dan aroma yang nikmat.</p>
+                <h4>Rp35.000</h4>
+                <button onclick="tambahKeranjang('Kopi Robusta', 35000)">
+                    Tambah Keranjang
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600" alt="Kopi Latte">
+                <h3>Kopi Latte</h3>
+                <p>Perpaduan espresso dan susu yang creamy.</p>
+                <h4>Rp25.000</h4>
+                <button onclick="tambahKeranjang('Kopi Latte', 25000)">
+                    Tambah Keranjang
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=600" alt="Kopi Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Kopi dengan perpaduan susu dan foam.</p>
+                <h4>Rp28.000</h4>
+                <button onclick="tambahKeranjang('Cappuccino', 28000)">
+                    Tambah Keranjang
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="tentang" id="tentang">
+        <h2>Tentang KopiKita</h2>
+        <p>
+            KopiKita adalah toko kopi online yang menyediakan
+            berbagai pilihan kopi berkualitas. Kami menghadirkan
+            kopi terbaik untuk menemani aktivitas sehari-hari.
+        </p>
+    </section>
+
+    <section class="kontak" id="kontak">
+        <h2>Hubungi Kami</h2>
+        <p>Email: kopikita@email.com</p>
+        <p>Instagram: @kopikita</p>
+    </section>
+
+    <footer>
+        <p>© 2026 KopiKita. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <div id="keranjang" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="tutupKeranjang()">&times;</span>
+            <h2>Keranjang Belanja</h2>
+            <div id="isi-keranjang"></div>
+            <h3 id="total">Total: Rp0</h3>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

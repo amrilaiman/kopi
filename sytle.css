@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fffaf3;
+    color: #3e2723;
+}
+
+/* Navbar */
+.navbar {
+    background: #3e2723;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: #f5c58b;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #d7a46b;
+}
+
+.cart-btn {
+    background: #c68b59;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    min-height: 450px;
+    background:
+        linear-gradient(#0008, #0008),
+        url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600")
+        center/cover;
+    display: flex;
+    align-items: center;
+    padding: 50px 10%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.btn {
+    background: #c68b59;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Produk */
+.produk {
+    padding: 70px 7%;
+    text-align: center;
+}
+
+.produk h2,
+.tentang h2,
+.kontak h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 35px;
+}
+
+.produk-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000015;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+}
+
+.card p {
+    color: #777;
+    min-height: 40px;
+}
+
+.card h4 {
+    color: #a45d2b;
+    margin: 15px 0;
+    font-size: 19px;
+}
+
+.card button,
+.modal-content button {
+    background: #6d3e27;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.card button:hover,
+.modal-content button:hover {
+    background: #a45d2b;
+}
+
+/* Tentang dan Kontak */
+.tentang,
+.kontak {
+    text-align: center;
+    padding: 60px 10%;
+    line-height: 1.8;
+}
+
+.tentang {
+    background: #f0e2d0;
+}
+
+.kontak {
+    background: #fffaf3;
+}
+
+/* Footer */
+footer {
+    background: #3e2723;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Modal Keranjang */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    background: #0009;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.modal-content {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 25px;
+    border-radius: 12px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.item-keranjang {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.hapus {
+    color: #b22;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#total {
+    margin: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .produk-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .produk-container {
+        grid-template-columns: 1fr;
+    }
+}
